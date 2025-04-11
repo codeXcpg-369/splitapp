@@ -1,6 +1,11 @@
  <mvc:View controllerName="app.splitapp.controller.DetailView"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" 
     xmlns="sap.m">
-	<Page id="idEmpty" title="Empty View" showNavButton="true" navButtonPress="onListView">
+	<Page id="idEmpty" title="Empty View" >
+    
+        <VBox class="sapUiSmallMargin">
+                <Text text="No data available" />
+         </VBox>
+
 	</Page>
 </mvc:View> 

@@ -94,7 +94,7 @@
         },
         {
           "name": "RouteEmpty",
-          "pattern": "",
+          "pattern": "empty",
           "target": [
             "TargetEmpty"
           ]
@@ -118,7 +118,7 @@
           "TargetEmpty": {
             "id": "idEmpty",
             "name": "EmptyView",
-            "controlAggregation": "emptyPages",
+            "controlAggregation": "detailPages",
             "viewLevel":3
           }
 
