@@ -1,19 +1,90 @@
- <mvc:View controllerName="app.splitapp.controller.DetailView"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
-    xmlns="sap.m">
-	<Page id="idDetail1" title="Detail View" showNavButton="true" navButtonPress="onListView">
-		<content>
-			<f:SimpleForm editable="true">
-				<Label text="Tool Name" class="bold-class" design="Bold"></Label>
-				<Text text="{toolsModel>toolsName}"></Text>
-				<Label text="Uses"></Label>
-				<Text text="{toolsModel>uses}"></Text>
-				<Image src="{toolsModel>image}" width="300px" height="300px"></Image>
-				<Label text="Weight"></Label>
-				<Text text="{toolsModel>weight}"></Text>
-				<Label text="Warranty"></Label>
-				<Text text="{toolsModel>warranty}"></Text>
-			</f:SimpleForm>
-		</content>
-	</Page>
-</mvc:View> 
+<mvc:View
+    controllerName="app.splitapp.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Page
+        id="idDetail1"
+        title="Detail View"
+        showNavButton="true"
+        navButtonPress="onListView"
+    >
+        <content>
+            <f:SimpleForm editable="true">
+                <Label
+                    text="Tool Name"
+                    class="bold-class"
+                    design="Bold"
+                />
+                <Text text="{toolsModel>toolsName}" />
+                <Label text="Uses" />
+                <Text text="{toolsModel>uses}" />
+                <Image
+                    src="{toolsModel>image}"
+                    width="200px"
+                    height="200px"
+                />
+                <Label text="Weight" />
+                <Text text="{toolsModel>weight}" />
+                <Label text="Warranty" />
+                <Text text="{toolsModel>warranty}" />
+            </f:SimpleForm>
+
+            <IconTabBar>
+                <items>
+                    <IconTabFilter icon="sap-icon://information">
+                        <VBox>
+                            <HBox>
+                                <Label
+                                    text="tools Name"
+                                    design="Bold"
+                                    class="bold-class"
+                                />
+                                <Text text="{toolsModel>toolsName}" />
+                            </HBox>
+                            <HBox>
+                                <Label
+                                    text="Weight"
+                                    design="Bold"
+                                />
+                                <Text text="{toolsModel>weight}" />
+                            </HBox>
+                            <HBox>
+                                <Label
+                                    text="Warranty"
+                                    design="Bold"
+                                />
+                                <Text text="{toolsModel>warranty}" />
+                            </HBox>
+                        </VBox>
+                    </IconTabFilter>
+
+                    <IconTabFilter icon="sap-icon://supplier">
+                        <Table items="{toolsModel>/supplierSet}">
+                            <columns>
+                                <Column>
+                                    <Text text="Supplier name" />
+                                </Column>
+                                <Column>
+                                    <Text text="Contact" />
+                                </Column>
+                                <Column>
+                                    <Text text="Location" />
+                                </Column>
+                            </columns>
+
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{toolsModel>supplierName}" />
+                                    <Text text="{toolsModel>contact}"/>
+                                    <Text text="{toolsModel>location}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </Table>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

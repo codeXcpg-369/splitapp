@@ -13,6 +13,16 @@ sap.ui.define([
             let oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteDetail");
         },
+
+
+
+
+
+
+
+
+
+        
         onSort: function () {
             //for first time, it is undefined
             if (!this.bDescending) {

@@ -91,19 +91,37 @@
           "target": [
             "TargetDetail"
           ]
+        },
+        {
+          "name": "RouteEmpty",
+          "pattern": "",
+          "target": [
+            "TargetEmpty"
+          ]
         }
       ],
 
       "targets": {
         "TargetMasterView": {
           "id": "MasterView",
-          "name": "MasterView"
+          "controlAggregation": "masterPages",
+          "name": "MasterView",
+          "viewLevel":1
         },
         
           "TargetDetail": {
             "id": "idDetail",
-            "name": "DetailView"
+            "name": "DetailView",
+            "controlAggregation": "detailPages",
+            "viewLevel":2
+          },
+          "TargetEmpty": {
+            "id": "idEmpty",
+            "name": "EmptyView",
+            "controlAggregation": "emptyPages",
+            "viewLevel":3
           }
+
         }
       },
 
