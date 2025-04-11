@@ -21,7 +21,7 @@ sap.ui.define([
 
         onListView: function () {
             let oRouter2 = this.getOwnerComponent().getRouter();
-            oRouter2.navTo("RouteEmpty");
+            oRouter2.navTo("RouteEmpty","RouteMasterView");
         }
     });
 });
