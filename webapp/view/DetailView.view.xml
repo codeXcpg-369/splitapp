@@ -61,7 +61,7 @@
                     </IconTabFilter>
 
                     <IconTabFilter icon="sap-icon://supplier">
-                        <Table items="{toolsModel>/supplierSet}">
+                        <Table  id="idMTable" items="{toolsModel>/supplierSet}">
                             <columns>
                             <Column>
                                     <Text text="Tools name" />
@@ -76,15 +76,16 @@
                                     <Text text="Location" />
                                 </Column>
                             </columns>
-
-                            <ColumnListItem>
-                                <cells>
-                                    <Text text="{toolsModel>toolsName}" />
-                                    <Text text="{toolsModel>supplierName}" />
-                                    <Text text="{toolsModel>contact}"/>
-                                    <Text text="{toolsModel>location}"/>
-                                </cells>
-                            </ColumnListItem>
+                       <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{toolsModel>toolsName}" />
+                                        <Text text="{toolsModel>supplierName}" />
+                                        <Text text="{toolsModel>contact}"/>
+                                        <Text text="{toolsModel>location}"/>
+                                    </cells>
+                                </ColumnListItem>
+                           </items>
                         </Table>
                     </IconTabFilter>
                 </items>
@@ -92,3 +93,8 @@
         </content>
     </Page>
 </mvc:View>
+
+
+
+
+

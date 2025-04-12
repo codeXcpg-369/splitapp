@@ -54,7 +54,7 @@
       },
       "toolsModel": {
         "type": "sap.ui.model.json.JSONModel",
-        "uri":"app.splitapp.model.mockData.toolsData.json"
+        "uri":"/model/mockData/toolsData.json"
       }
     },
     "resources": {

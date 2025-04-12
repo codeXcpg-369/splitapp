@@ -1,5 +1,5 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller", "sap/ui/model/Filter", "sap/ui/model/FilterOperator", "sap/ui/model/Sorter"
+    "./BaseController", "sap/ui/model/Filter", "sap/ui/model/FilterOperator", "sap/ui/model/Sorter"
 ], (Controller, Filter, FilterOperator, Sorter) => {
     "use strict";
 
@@ -14,15 +14,6 @@ sap.ui.define([
             oRouter.navTo("RouteDetail");
         },
 
-
-
-
-
-
-
-
-
-        
         onSort: function () {
             //for first time, it is undefined
             if (!this.bDescending) {
