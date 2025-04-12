@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:f="sap.ui.layout.form"
     xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar"
 >
     <Page
         id="idDetail1"
@@ -22,13 +23,9 @@
                 <Text text="{toolsModel>uses}" />
                 <Image
                     src="{toolsModel>image}"
-                    width="200px"
-                    height="200px"
+                    width="100px"
+                    height="100px"
                 />
-                <Label text="Weight" />
-                <Text text="{toolsModel>weight}" />
-                <Label text="Warranty" />
-                <Text text="{toolsModel>warranty}" />
             </f:SimpleForm>
 
             <IconTabBar>
@@ -60,7 +57,14 @@
                         </VBox>
                     </IconTabFilter>
 
+                <!-- <comp:FilterBar>
+                    <comp:FilterItem></comp:FilterItem>
+                </comp:FilterBar> -->
                     <IconTabFilter icon="sap-icon://supplier">
+                    <Label text="Supplier" ></Label>
+                              <Input id="idInptSupp" width="200px" liveChange="onFilter"></Input>
+                    <Label text="City" ></Label>
+                                <Input id="idInptCity" width="200px" liveChange="onFilter"></Input>
                         <Table  id="idMTable" items="{toolsModel>/supplierSet}">
                             <columns>
                             <Column>
@@ -80,7 +84,9 @@
                                 <ColumnListItem>
                                     <cells>
                                         <Text text="{toolsModel>toolsName}" />
-                                        <Text text="{toolsModel>supplierName}" />
+                                          <Input value="{toolsModel>supplierName}"
+                                        showValueHelp="true"
+                                        valueHelpRequest="onF4Help"></Input>
                                         <Text text="{toolsModel>contact}"/>
                                         <Text text="{toolsModel>location}"/>
                                     </cells>
