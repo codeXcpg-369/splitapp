@@ -63,6 +63,9 @@
                     <IconTabFilter icon="sap-icon://supplier">
                         <Table items="{toolsModel>/supplierSet}">
                             <columns>
+                            <Column>
+                                    <Text text="Tools name" />
+                                </Column>
                                 <Column>
                                     <Text text="Supplier name" />
                                 </Column>
@@ -76,6 +79,7 @@
 
                             <ColumnListItem>
                                 <cells>
+                                    <Text text="{toolsModel>toolsName}" />
                                     <Text text="{toolsModel>supplierName}" />
                                     <Text text="{toolsModel>contact}"/>
                                     <Text text="{toolsModel>location}"/>
