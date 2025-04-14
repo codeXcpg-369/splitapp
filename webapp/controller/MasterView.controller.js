@@ -45,11 +45,11 @@ sap.ui.define([
             let oList = oEvent.getParameter("listItem");
             let sPath = oList.getBindingContextPath();
             let aItems = sPath.split("/");
-            let id = aItems[aItems.length-1];
+            let id = aItems[aItems.length - 1];
             let oRouter = this.getOwnerComponent().getRouter();
-                oRouter.navTo("RouteDetail",{
-                    index:id
-                })
+            oRouter.navTo("RouteDetail", {
+                index: id
+            })
 
 
 
@@ -71,6 +71,12 @@ sap.ui.define([
             // //bind the page with the path
             // oDetail.bindElement(completePath);
             // this.onDetailView();
+        },
+        createForm: function () {
+            // Navigate to the CreateFormView
+            let oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteCreateFormView");
         }
+
     });
 });

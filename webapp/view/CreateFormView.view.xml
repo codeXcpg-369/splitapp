@@ -1,0 +1,32 @@
+<mvc:View controllerName="app.splitapp.controller.CreateFormView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page title="Create Form" id="idCreateForm">
+        <content>
+            <f:SimpleForm editable="true" >
+                <Label text="Tool Name"/>
+                <Input value=""/>
+                <Label text="Uses"/>
+                <Input value=""/>
+                <Label text="Weight"/>
+                <Input value=""/>
+                <Label text="Warranty"/>
+                <Input value=""/>
+                <Label text="Price"/>
+                <Input value=""/>
+                <Label text="Unit"/>
+                <Input value=""/>
+                <Label text="Availability"/>
+                <Input value=""/>
+            </f:SimpleForm>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Accept" press="onSave"/>
+                <Button text="Cancel" press="onCancel"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -36,25 +36,11 @@
 					</List>
 		</content>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		<footer>
 			<OverflowToolbar>
 				<ToolbarSpacer/>
-				<Button text="Accept" type="Accept"/>
-				<Button text="Reject" type="Reject"/>
-				<Button text="Edit"/>
-				<Button text="Delete"/>
+				<Button text="Create" type="Accept" press="createForm"/>
 			</OverflowToolbar>
 		</footer>
 	</Page>

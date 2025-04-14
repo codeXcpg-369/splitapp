@@ -65,6 +65,8 @@
                               <Input id="idInptSupp" width="200px" liveChange="onFilter"></Input>
                     <Label text="City" ></Label>
                                 <Input id="idInptCity" width="200px" liveChange="onFilter"></Input>
+
+                                
                         <Table  id="idMTable" items="{toolsModel>/supplierSet}">
                             <columns>
                             <Column>
