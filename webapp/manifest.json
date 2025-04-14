@@ -89,7 +89,7 @@
           "name": "RouteDetail",
           "pattern": "view2/{index}",
           "target": [
-            "TargetDetail"
+           "TargetMasterView", "TargetDetail"
           ]
         }
        
